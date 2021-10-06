@@ -1,0 +1,46 @@
+server:
+    host: "0.0.0.0"
+    port: "80"
+    mode: "RELEASE"
+db:
+    dialect: "mysql"
+    user: "root"
+    password: "1q2w3e"
+    host: "subgame-db"
+    port: 3306
+    database: "SubGameModuleService"
+    flag: "charset=utf8mb4&parseTime=True&loc=Local&collation=utf8mb4_unicode_ci"
+jwt:
+    issuer: "SubGameModuleService"
+    access_token_exp_sec: 1400
+    refresh_token_exp: 259200
+    secret: Eesh5je1kai3ahb0
+redis:
+    host: "subgame-redis"
+    port: 6379
+    database: 1
+    auth: "AeLP6RFYQJdzayTRLrWZ64NxbTh7yhNt"
+    max_idle: 80
+    max_active: 12000
+    idle_timeout: 2500
+    notify_active: 1296000 # 15 days
+    polling_active: 2592000 # 30 days
+subgame:
+    rpc: "wss://mainnet.subgame.org"
+    ss58_prefix: "27"
+    event_key: "0x26aa394eea5630e07c48ae0c9558cef780d41e5e16056765bc8461851072c9d7"
+    md_owner_pubkey: ""
+    md_owner_seed: ""
+notify:
+    service_name: ""
+    slack_webhook: ""
+    slack_log_webhook: ""
+    telegram_api_token: "" 
+    telegram_chat_id: "" 
+email:
+    api_url: ""
+    api_key: ""
+    domain: ""
+    agent_verify_mail_day_limit: 6
+other:
+    email_verify_link: ""

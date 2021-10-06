@@ -1,0 +1,64 @@
+version: "3"
+services:
+    subgame-db:
+        image: mysql:5.7.25
+        container_name: subgame-db
+        hostname: subgame-db
+        ports:
+            - "13306:3306"
+        environment:
+            - MYSQL_ROOT_PASSWORD=1q2w3e
+            - TZ=Asia/Taipei
+        command: mysqld --user=root --character-set-server=utf8mb4 --collation-server=utf8mb4_unicode_ci --federated --sql_mode=""
+
+    subgame-redis:
+        image: redis
+        container_name: subgame-redis
+        hostname: subgame-redis
+        ports:
+            - "16379:6379"
+        environment:
+            - TZ=Asia/Taipei
+        command: redis-server --requirepass "AeLP6RFYQJdzayTRLrWZ64NxbTh7yhNt" --appendonly yes
+
+    subgame-backend:
+        image: subgame-network/backend:1.0.0
+        container_name: subgame-backend
+        hostname: subgame-backend
+        build:
+            context: ./backend
+            dockerfile: Dockerfile
+        volumes: 
+            - ./backend:/var/www/html/microService
+        entrypoint: bash -c "./scripts/docker_entrypoint.sh"
+        depends_on:
+            - subgame-db
+            - subgame-redis
+
+    subgame-frontend:
+        image: subgame-network/frontend:1.0.0
+        container_name: subgame-frontend
+        hostname: subgame-frontend
+        build:
+            context: ./frontend
+            dockerfile: Dockerfile
+        volumes: 
+            - ./frontend:/var/www/html/microService
+        entrypoint: bash -c "./scripts/docker_entrypoint.sh"
+
+    subgame-nginx:
+        image: nginx:1.16.0
+        container_name: subgame-nginx
+        hostname: subgame-nginx
+        volumes: 
+            - ./nginx-default.conf:/etc/nginx/conf.d/default.conf
+            - ./frontend/build:/var/www/html/microService
+        ports: 
+            - 80:80
+        depends_on: 
+            - subgame-backend
+            - subgame-frontend
+
+networks:
+    default:
+        driver: bridge

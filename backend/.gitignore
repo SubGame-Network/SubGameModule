@@ -1,0 +1,8 @@
+tmp/
+log/
+config/config.yml
+dump.rdb
+
+/.idea
+/.vscode
+main

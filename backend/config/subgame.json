@@ -1,0 +1,390 @@
+{
+  "Address": "AccountId",
+  "BlockNumber": "U32",
+  "LeasePeriod": "BlockNumber",
+  "Weight": "u64",
+  "Keys": "SessionKeysPolkadot",
+  "DispatchInfo": {
+    "type": "struct",
+    "type_mapping": [
+      [
+        "weight",
+        "Weight"
+      ],
+      [
+        "class",
+        "DispatchClass"
+      ],
+      [
+        "paysFee",
+        "Pays"
+      ]
+    ]
+  },
+  "DispatchResult": {
+    "type": "enum",
+    "type_mapping": [
+      [
+        "Ok",
+        "Null"
+      ],
+      [
+        "Error",
+        "DispatchError"
+      ]
+    ]
+  },
+  "Timepoint": {
+    "type": "struct",
+    "type_mapping": [
+      [
+        "height",
+        "BlockNumber"
+      ],
+      [
+        "index",
+        "u32"
+      ]
+    ]
+  },
+  "Multisig": {
+    "type": "struct",
+    "type_mapping": [
+      [
+        "when",
+        "Timepoint"
+      ],
+      [
+        "deposit",
+        "Balance"
+      ],
+      [
+        "depositor",
+        "AccountId"
+      ],
+      [
+        "approvals",
+        "Vec<AccountId>"
+      ]
+    ]
+  },
+  "BalanceLock<Balance, BlockNumber>": {
+    "type": "struct",
+    "type_mapping": [
+      [
+        "id",
+        "LockIdentifier"
+      ],
+      [
+        "amount",
+        "Balance"
+      ],
+      [
+        "reasons",
+        "Reasons"
+      ]
+    ]
+  },
+  "ProxyType": {
+    "type": "enum",
+    "value_list": [
+      "Any",
+      "NonTransfer",
+      "Governance",
+      "Staking",
+      "DeprecatedSudoBalances",
+      "IdentityJudgement",
+      "CancelProxy"
+    ]
+  },
+  "ReferendumInfo": {
+    "type": "enum",
+    "type_mapping": [
+      [
+        "Ongoing",
+        "ReferendumStatus"
+      ],
+      [
+        "Finished",
+        "ReferendumInfoFinished"
+      ]
+    ]
+  },
+  "CompactAssignments#23-?": "CompactAssignmentsLatest",
+  "RefCount": "u32",
+  "Box<<T as Config>::Call>": "Call",
+  "Box<<T as Config<I>>::Proposal>": "Proposal",
+  "AccountInfo": "AccountInfoWithProviders",
+  "Address#28-?": "MultiAddress",
+  "LookupSource#28-?": "MultiAddress",
+  "Keys#28-29": {
+    "type": "struct",
+    "type_mapping": [
+      [
+        "grandpa",
+        "AccountId"
+      ],
+      [
+        "babe",
+        "AccountId"
+      ],
+      [
+        "im_online",
+        "AccountId"
+      ],
+      [
+        "para_validator",
+        "AccountId"
+      ],
+      [
+        "para_assignment",
+        "AccountId"
+      ],
+      [
+        "authority_discovery",
+        "AccountId"
+      ]
+    ]
+  },
+  "ValidatorPrefs#28-?": "ValidatorPrefsWithBlocked",
+  "Keys#30-?": "SessionKeys7B",
+  "AccountInfo#30-?": "AccountInfoWithTripleRefCount",
+
+  "GameIndex": "u32",
+  "ChipBalance": "u128",
+  "GameMode": "u8",
+  "CommodityLimit": "u128",
+  "UserCommodityLimit": "u64",
+  "BlockHash": "h256",
+  "ChipsDetail": {
+    "type": "struct",
+    "type_mapping": [
+      [
+        "balance",
+        "Balance"
+      ],
+      [
+        "reserve",
+        "Reserve"
+      ]
+    ]
+  },
+  "Template": {
+    "type": "struct",
+    "type_mapping": [
+      [
+        "template_id",
+        "TemplateId"
+      ],
+      [
+        "template_name",
+        "TemplateName"
+      ]
+    ]
+  },
+  "GameInfo": {
+    "type": "struct",
+    "type_mapping": [
+      [
+        "owner",
+        "Owner"
+      ],
+      [
+        "block_number",
+        "BlockNumber"
+      ],
+      [
+        "bet_block_number",
+        "DrawBlockNumber"
+      ],
+      [
+        "amount",
+        "Amount"
+      ]
+    ]
+  },
+  "UserInfo": {
+    "type": "struct",
+    "type_mapping": [
+      [
+        "Account",
+        "Vec<u8>"
+      ],
+      [
+        "ReferrerAccount",
+        "Vec<u8>"
+      ]
+    ]
+  },
+  "SubGameAssetMetadata": {
+    "type": "struct",
+    "type_mapping": [
+      [
+        "deposit",
+        "DepositBalance"
+      ],
+      [
+        "name",
+        "Vec<u8>"
+      ],
+      [
+        "symbol",
+        "Vec<u8>"
+      ],
+      [
+        "decimals",
+        "u8"
+      ]
+    ]
+  },
+  "SubGameAssetDetails": {
+    "type": "struct",
+    "type_mapping": [
+      [
+        "owner",
+        "AccountId"
+      ],
+      [
+        "issuer",
+        "AccountId"
+      ],
+      [
+        "admin",
+        "AccountId"
+      ],
+      [
+        "freezer",
+        "AccountId"
+      ],
+      [
+        "supply",
+        "u64"
+      ],
+      [
+        "deposit",
+        "DepositBalance"
+      ],
+      [
+        "max_zombies",
+        "u32"
+      ],
+      [
+        "min_balance",
+        "u64"
+      ],
+      [
+        "zombies",
+        "u32"
+      ],
+      [
+        "accounts",
+        "u32"
+      ],
+      [
+        "is_frozen",
+        "bool"
+      ]
+    ]
+  },
+  "SusGameAssetBalance": {
+    "type": "struct",
+    "type_mapping": [
+      [
+        "balance",
+        "u64"
+      ],
+      [
+        "is_frozen",
+        "bool"
+      ],
+      [
+        "is_zombie",
+        "bool"
+      ]
+    ]
+  },
+  "AssetId":"u32",
+  "Lookup":"AccountId",
+  "LookupSource":"AccountId",
+  "SGAssetBalance":"u64",
+  "DepositBalance":"u64",
+  "CommodityId": "Hash",
+  "Commodity": {
+    "type": "struct",
+    "type_mapping": [
+      ["id", "CommodityId"],
+      ["info", "Vec<u8>"]
+    ]
+  },
+  "ProgramId": "u64",
+  "Program": {
+    "type": "struct",
+    "type_mapping": [
+      ["program_id", "ProgramId"],
+      ["stake_amount", "u128"],
+      ["valid_day_count", "u64"]
+    ]
+  },
+  "PalletId": "u64",
+  "PalletInfo": {
+    "type": "struct",
+    "type_mapping": [
+      ["pallet_id", "PalletId"],
+      ["name", "Vec<u8>"]
+    ]
+  },
+  "NftId": "Hash",
+  "LeaseInfo": {
+    "type": "struct",
+    "type_mapping": [
+      ["pallet_id", "PalletId"],
+      ["nft_id", "NftId"]
+    ]
+  },
+  "StakeInfo": {
+    "type": "struct",
+    "type_mapping": [
+      ["pallet_id", "PalletId"],
+      ["program_id", "ProgramId"],
+      ["stake_amount", "Balance"],
+      ["expires_at", "Moment"],
+      ["nft_id", "NftId"]
+    ]
+  },
+  "Moment": "u64",
+  "MomentOf": "Moment",
+  "SwapId": "u32",
+  "SwapSender": "AccountId",
+  "SwapPoolOwner": "AccountId",
+  "SwapAssetX": "u32",
+  "SwapAssetY": "u32",
+  "SwapAmountX": "u64",
+  "SwapAmountY": "u64",
+  "SwapAmountLP": "u64",
+  "SwapPoolDetails": {
+    "type": "struct",
+    "type_mapping": [
+      [
+        "swap_id", "u32"
+      ],
+      [
+        "account", "AccountId"
+      ],
+      [
+        "asset_a", "u32"
+      ],
+      [
+        "asset_b", "u32"
+      ],
+      [
+        "asset_b", "u32"
+      ],
+      [
+        "asset_lp", "u32"
+      ],
+      [
+        "swap_k", "u128"
+      ]
+    ]
+  }
+}

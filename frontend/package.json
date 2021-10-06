@@ -1,0 +1,87 @@
+{
+  "name": "subgame-stake-b2b",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "@ckeditor/ckeditor5-build-classic": "^24.0.0",
+    "@ckeditor/ckeditor5-custom-build": "git+https://github.com/guanfantech/CKEditor.git#v1.0.4",
+    "@ckeditor/ckeditor5-react": "^2.1.0",
+    "@polkadot/api": "^5.6.1",
+    "@polkadot/extension-dapp": "^0.37.2",
+    "@polkadot/ui-keyring": "^0.72.1",
+    "@subgame/api": "^0.0.12",
+    "@testing-library/jest-dom": "^5.11.4",
+    "@testing-library/react": "^11.1.0",
+    "@testing-library/user-event": "^12.1.10",
+    "@types/jest": "^26.0.15",
+    "@types/node": "^12.0.0",
+    "@types/react": "^17.0.0",
+    "@types/react-datepicker": "^3.1.8",
+    "@types/react-dom": "^17.0.0",
+    "@types/react-router-dom": "^5.1.7",
+    "@types/react-select": "^4.0.13",
+    "@types/react-table": "^7.0.29",
+    "@types/react-window": "^1.8.5",
+    "@types/styled-components": "^5.1.7",
+    "axios": "^0.21.1",
+    "formik": "^2.2.5",
+    "github-markdown-css": "^4.0.0",
+    "react": "^17.0.1",
+    "react-cookie": "^4.0.3",
+    "react-csv": "^2.0.3",
+    "react-datepicker": "^3.6.0",
+    "react-device-detect": "^1.15.0",
+    "react-dom": "^17.0.1",
+    "react-icon-guanfan": "git+https://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@github.com/guanfantech/react-icon-guanfan.git#1.0.27",
+    "react-infinite-scroll-component": "^6.1.0",
+    "react-intl": "^5.13.2",
+    "react-markdown": "^7.0.0",
+    "react-minimal-pie-chart": "^8.1.0",
+    "react-phone-input-2": "^2.14.0",
+    "react-player": "^2.8.2",
+    "react-query": "^3.13.4",
+    "react-router-dom": "^5.2.0",
+    "react-scripts": "4.0.3",
+    "react-select": "^4.3.0",
+    "react-table": "^7.6.3",
+    "react-window": "^1.8.6",
+    "remark-gfm": "^2.0.0",
+    "styled-components": "^5.2.1",
+    "typescript": "^4.1.2",
+    "web-vitals": "^1.0.1",
+    "yup": "^0.29.3"
+  },
+  "scripts": {
+    "start": "react-app-rewired start",
+    "build": "react-app-rewired build",
+    "test": "react-app-rewired test --env=jsdom",
+    "eject": "react-scripts eject",
+    "checksize": "node scripts/analyze.js"
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "proxy": "https://sg-module.guanfantech.com",
+  "devDependencies": {
+    "@types/react-csv": "^1.1.2",
+    "@types/yup": "^0.29.11",
+    "progress-bar-webpack-plugin": "^2.1.0",
+    "react-app-rewired": "^2.1.8",
+    "webpack-bundle-analyzer": "^4.4.0"
+  }
+}
