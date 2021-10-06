@@ -42,6 +42,12 @@ After that, you can see the status of the module lease in Module Manager.
 
 ![](https://i.imgur.com/9p4O4b7.png)
 
+## Contact Us
+
+Finally, if you have any questions, welcome to send a message, and good luck~~
+
+![](https://i.imgur.com/gXbsrwe.png)
+
 ## Run in Docker
 
 First, install [Docker](https://docs.docker.com/get-docker/) and
@@ -57,9 +63,3 @@ docker-compose up
 also replace the default command by appending your own. A few useful ones are as follow.
 
 Access the UI via http://localhost
-
-## Contact Us
-
-Finally, if you have any questions, welcome to send a message, and good luck~~
-
-![](https://i.imgur.com/gXbsrwe.png)
