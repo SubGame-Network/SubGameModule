@@ -13,6 +13,8 @@ import Feedback, {
 
 import { usePolkadotJS } from "@polkadot/api-provider";
 
+import { ChakraProvider } from "@chakra-ui/react";
+
 const Cookie = new Cookies();
 interface IAppContext {
   Cookie: Cookies;
@@ -66,19 +68,21 @@ function App() {
   return (
     <IntlProvider locale={locale}>
       <ThemeProvider>
-        <AppContext.Provider
-          value={{
-            Cookie,
-            locale,
-            showFeedBack,
-            setLocale,
-          }}
-        >
-          {feedbackShow && (
-            <Feedback setFeedbackShow={setFeedbackShow} {...feedbackProps} />
-          )}
-          <Router />
-        </AppContext.Provider>
+        <ChakraProvider>
+          <AppContext.Provider
+            value={{
+              Cookie,
+              locale,
+              showFeedBack,
+              setLocale,
+            }}
+          >
+            {feedbackShow && (
+              <Feedback setFeedbackShow={setFeedbackShow} {...feedbackProps} />
+            )}
+            <Router />
+          </AppContext.Provider>
+        </ChakraProvider>
       </ThemeProvider>
     </IntlProvider>
   );

@@ -2,7 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import { FormattedMessage } from "react-intl";
 
-import { IconFilledSignWrong } from "react-icon-guanfan";
+import { IconFilledSignWrong } from "@subgame/react-icon-subgame";
 interface Props extends React.HTMLAttributes<HTMLButtonElement> {
   isPlaying?: boolean;
   showTips?: boolean;

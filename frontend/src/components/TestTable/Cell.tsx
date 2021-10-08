@@ -5,7 +5,7 @@ import {
   IconOutlineSignComplete,
   IconFilledPendingUgly,
   IconOutlineCrossround,
-} from "react-icon-guanfan";
+} from "@subgame/react-icon-subgame";
 import { formatTime } from "utils/format";
 
 export const render_Time = ({ value }: any) => {

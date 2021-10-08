@@ -1,12 +1,12 @@
 import { Dispatch } from "react";
 import { web3Accounts, web3Enable } from "@polkadot/extension-dapp";
 import { WsProvider, ApiPromise } from "@polkadot/api";
+import { options } from "@subgame/api";
 import keyring from "@polkadot/ui-keyring";
-import jsonrpc from "@polkadot/types/interfaces/jsonrpc";
 
 import { I_INIT_STATE, Actions } from "./useReducer";
 
-import { CUSTOM_RPC, TYPES, DAPP_NAME } from "./config";
+import { DAPP_NAME } from "./config";
 
 export const connect = async (
   state: I_INIT_STATE,
@@ -20,13 +20,7 @@ export const connect = async (
 
   const provider = new WsProvider(nodeURL);
 
-  const _api = new ApiPromise({
-    provider,
-    types: {
-      ...TYPES,
-    },
-    rpc: { ...jsonrpc, ...CUSTOM_RPC },
-  });
+  const _api = new ApiPromise(options({ provider }));
 
   _api.on("connected", () => dispatch({ type: "CONNECTING" }));
 

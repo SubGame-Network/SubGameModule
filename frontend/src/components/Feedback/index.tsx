@@ -6,7 +6,7 @@ import {
   IconOutlineSignComplete,
   IconFilledSignMention,
   IconOutlineCopy,
-} from "react-icon-guanfan";
+} from "@subgame/react-icon-subgame";
 
 export type TType = "Submitted" | "Failed" | "Copied";
 export type TMessage = string;

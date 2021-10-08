@@ -7,7 +7,7 @@ import WalletListBtn from "./WalletListBtn";
 import { useHistory, Link } from "react-router-dom";
 import { usePolkadotJS } from "@polkadot/api-provider";
 import MoreButton from "../MoreButton";
-import { IconOutlineLanguage } from "react-icon-guanfan";
+import { IconOutlineLanguage } from "@subgame/react-icon-subgame";
 const Nav = () => {
   const { Cookie, setLocale } = useAppContext();
 
@@ -54,9 +54,8 @@ const Nav = () => {
   ];
 
   const clickOpenLanguageMenu = () => {
-    const btn: HTMLButtonElement | null = document.querySelector(
-      "#languageRef"
-    );
+    const btn: HTMLButtonElement | null =
+      document.querySelector("#languageRef");
     if (btn) btn.click();
   };
   const clickOpenManage = () => {
@@ -69,7 +68,7 @@ const Nav = () => {
       <div className="wrap">
         <div className="navLeft">
           <img
-            src="./images/Logo.png"
+            src="./images/Logo.svg"
             alt="Logo"
             onClick={() => {
               history.push("/");
@@ -117,7 +116,7 @@ const Nav = () => {
           <div className="language">
             <MoreButton
               FillIcon={{
-                icon: <IconOutlineLanguage size={20} color="#171717" />,
+                icon: <IconOutlineLanguage color="#171717" />,
                 openColor: "",
                 closeColor: "",
               }}

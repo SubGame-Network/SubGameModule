@@ -1,6 +1,9 @@
 import React from "react";
 
-import { IconSharpArrowright, IconSharpArrowleft } from "react-icon-guanfan";
+import {
+  IconSharpArrowright,
+  IconSharpArrowleft,
+} from "@subgame/react-icon-subgame";
 
 interface PageButtonGroupProps {
   totalPages: number;

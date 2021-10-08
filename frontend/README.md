@@ -2,12 +2,6 @@
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Init
-
-- Copy `src/config/config.prod.json` to `src/config/config.json`
-
-> Note: It is recommended to use docker to start the complete application, the frontend alone may be missing data presentation.
-
 ## Available Scripts
 
 In the project directory, you can run:

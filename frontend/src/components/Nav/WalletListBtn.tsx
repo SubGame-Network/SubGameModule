@@ -2,7 +2,7 @@ import React, { useMemo, useState } from "react";
 import styled from "styled-components";
 import { FormattedMessage } from "react-intl";
 
-import { IconOutlineCheck } from "react-icon-guanfan";
+import { IconOutlineCheck } from "@subgame/react-icon-subgame";
 
 import { usePolkadotJS } from "@polkadot/api-provider";
 import sliceAddress from "utils/sliceAddress";

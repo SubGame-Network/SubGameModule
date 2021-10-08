@@ -2,7 +2,7 @@ import React, { useRef, useState } from "react";
 import styled from "styled-components";
 import { FormattedMessage, useIntl } from "react-intl";
 
-import { IconOutlineEye, IconOutlineEyeoff } from "react-icon-guanfan";
+import { IconOutlineEye, IconOutlineEyeoff } from "@subgame/react-icon-subgame";
 
 interface InputProps extends React.HTMLProps<HTMLInputElement> {
   errorMsg?: string;

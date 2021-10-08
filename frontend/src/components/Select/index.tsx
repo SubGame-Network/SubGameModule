@@ -2,7 +2,7 @@ import React from "react";
 import { useIntl, FormattedMessage } from "react-intl";
 import Select, { components, Props } from "react-select";
 import styled, { useTheme } from "styled-components";
-import { IconSharpArrowdown } from "react-icon-guanfan";
+import { IconSharpArrowdown } from "@subgame/react-icon-subgame";
 
 export type TOption = {
   label: string;

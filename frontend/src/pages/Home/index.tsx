@@ -24,7 +24,7 @@ function Home(props: any) {
           play={isPlaying}
           controls={isPlaying}
           url="./images/module.mp4"
-          coverImgPath="./images/homeBanner.png"
+          coverImgPath="./images/banner.svg"
         />
         {isPlaying ? (
           <PlayButton
